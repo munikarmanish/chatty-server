@@ -2,6 +2,8 @@
   "name": "chatty-server",
   "version": "1.0.0",
   "description": "A javascript server for chatty-app.",
+  "repository": "github:munikarmanish/chatty-server",
+  "author": "Manish Munikar <munikarmanish@gmail.com>",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
