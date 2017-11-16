@@ -1,5 +1,4 @@
 import express from 'express';
-import http from 'http';
 import bodyParser from 'body-parser';
 import { graphqlExpress, graphiqlExpress } from 'graphql-server-express';
 import { makeExecutableSchema, addMockFunctionsToSchema } from 'graphql-tools';
@@ -29,8 +28,6 @@ app.use('/graphiql', graphiqlExpress({
   endpointURL: '/graphql',
 }));
 
-const graphQLServer = http.createServer(app);
-
-graphQLServer.listen(GRAPHQL_PORT, () => {
+app.listen(GRAPHQL_PORT, () => {
   console.log(`GraphQL http://localhost:${GRAPHQL_PORT}/graphql`);
 });
